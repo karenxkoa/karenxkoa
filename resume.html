@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karen Ojeda | Resume</title>
+<meta name="description" content="Product Designer">
+<meta property="og:title" content="Karen Ojeda | Resume">
+<meta property="og:description" content="Product Designer">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#212121;
+    --card:#2a2a2a;
+    --mauve:#806190;
+    --lavender:#DFA0FF;
+    --cream:#FDFFCA;
+    --fog:#F4F4F4;
+    --body-text:#d8d8d8;
+    --muted:#9a9a9a;
+    --max-w:820px;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--fog);
+    font-family:'DM Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .page{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:56px 28px 40px;
+  }
+
+  h1, h2, h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-weight:400;
+    margin:0;
+  }
+
+  .accent-bar{
+    width:64px;
+    height:3px;
+    border-radius:2px;
+    background:linear-gradient(to right, var(--cream), var(--lavender));
+    margin-bottom:14px;
+  }
+
+  /* Hero */
+  .hero{
+    display:flex;
+    align-items:center;
+    gap:48px;
+    margin-bottom:56px;
+  }
+
+  .photo{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    object-fit:cover;
+    filter:grayscale(100%);
+    border:1px solid #3a3a3a;
+    flex-shrink:0;
+  }
+
+  .hero h1{
+    color:var(--lavender);
+    font-size:44px;
+    letter-spacing:.02em;
+    line-height:1.05;
+  }
+
+  .hero h1 .sep{
+    color:var(--body-text);
+    font-weight:400;
+    margin:0 6px;
+  }
+
+  .bio{
+    margin-top:14px;
+    font-size:15.5px;
+    line-height:1.65;
+    color:var(--fog);
+    max-width:480px;
+  }
+
+  /* Cards */
+  .card{
+    background:var(--card);
+    border-radius:18px;
+    padding:36px 32px;
+    margin-bottom:32px;
+  }
+
+  .entry{
+    margin-bottom:34px;
+  }
+  .entry:last-child{
+    margin-bottom:0;
+  }
+
+  .entry h2{
+    color:var(--cream);
+    font-size:26px;
+    letter-spacing:.02em;
+    margin-bottom:10px;
+  }
+
+  .role-meta{
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    color:var(--lavender);
+    font-size:15px;
+    margin:0 0 14px;
+  }
+
+  .subproject{
+    font-weight:700;
+    color:var(--fog);
+    font-size:14.5px;
+    margin:18px 0 10px;
+  }
+
+  ul.bullets{
+    list-style:none;
+    margin:0 0 4px;
+    padding:0;
+  }
+
+  ul.bullets li{
+    position:relative;
+    padding-left:20px;
+    font-size:14.5px;
+    line-height:1.75;
+    color:var(--body-text);
+  }
+
+  ul.bullets li::before{
+    content:"✦";
+    position:absolute;
+    left:0;
+    color:var(--body-text);
+    font-size:12px;
+    top:5px;
+  }
+
+  .plain-text{
+    font-size:14.5px;
+    line-height:1.75;
+    color:var(--body-text);
+    margin:0;
+  }
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:18px;
+    padding:12px 20px;
+    background:#3a3a3a;
+    color:var(--lavender);
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    transition:background .15s ease;
+  }
+  .pill:hover{ background:#454545; }
+  .pill svg{ width:16px; height:16px; }
+
+  /* Skills / technologies */
+  .skill-group{
+    margin-bottom:18px;
+  }
+  .skill-group h3{
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--fog);
+    margin:0 0 6px;
+  }
+  .skill-group p{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.7;
+    color:var(--body-text);
+  }
+
+  .section-gap{
+    margin-top:36px;
+  }
+
+  /* Footer */
+  footer{
+    text-align:center;
+    padding:24px 0 8px;
+  }
+
+  .social-row{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+
+  .social-row a{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#3a3346;
+    color:var(--lavender);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-family:'DM Sans', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    transition:background .15s ease;
+  }
+  .social-row a:hover{ background:#463c54; }
+  .social-row a svg{ width:20px; height:20px; }
+
+  .tagline{
+    margin-top:20px;
+    font-size:12px;
+    color:#6f6f6f;
+  }
+
+  /* Responsive */
+  @media (max-width:640px){
+    .page{ padding:40px 20px 28px; }
+    .hero{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:24px;
+      margin-bottom:40px;
+    }
+    .photo{ width:140px; height:140px; }
+    .hero h1{ font-size:34px; }
+    .card{ padding:28px 22px; }
+    .entry h2{ font-size:22px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <img class="photo" src="resume-assets/karen-photo.jpg" alt="Karen Ojeda">
+    <div>
+      <div class="accent-bar"></div>
+      <h1>Karen Ojeda<span class="sep">|</span>Resume</h1>
+      <p class="bio">Mechatronics Engineer &amp; Product Designer graduated from TecNM Culiacán in 2021. Specialized in Digital Product Design (UX/UI) at DEV.F in 2023. Mexican.</p>
+    </div>
+  </header>
+
+  <section class="card">
+
+    <div class="entry">
+      <div class="accent-bar"></div>
+      <h2>UX/UI Designer</h2>
+      <p class="role-meta">Tiny Laura | Mar 2026 – Present</p>
+      <ul class="bullets">
+        <li>Freelance work for an independent art store</li>
+        <li>End-to-end design of a product catalog website featuring prints, stickers, sticker sheets, pins, and apparel</li>
+        <li>Information architecture definition and wireframing</li>
+        <li>Visual identity design with a cozy-minimal aesthetic</li>
+        <li>Integration with Ko-Fi as a payment platform</li>
+        <li>Ongoing hosting on Framer</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="accent-bar"></div>
+      <h2>Lead Product Designer (UX/UI)</h2>
+      <p class="role-meta">Nexgen Systems | Mar – Jul 2026</p>
+      <ul class="bullets">
+        <li>Strategic design and product decision-making</li>
+        <li>Leadership and training of a two-person UX/UI Design team</li>
+        <li>Team guidance across projects, ensuring design quality and consistency</li>
+        <li>Involved in critical product decisions and cross-functional consultations on UX/UI direction for the following projects:</li>
+      </ul>
+
+      <p class="subproject">Easy Order (Android app &amp; web) — (SaaS Product)</p>
+      <ul class="bullets">
+        <li>Analysis of improvement opportunities and experience direction across all modules</li>
+        <li>UX analysis of the current site with documented improvement proposals</li>
+        <li>Design of the new KDS for Easy Order Kitchen Module</li>
+        <li>Ongoing redesign of the Cashier and Waiter modules</li>
+        <li>UI component design: modals, floating elements, buttons, and navigation bars</li>
+        <li>Documentation and migration of the design system in Figma to a variables-based system</li>
+      </ul>
+
+      <p class="subproject">i3DMakers (Industrial 3D printing website) — (B2B Project)</p>
+      <ul class="bullets">
+        <li>User personas and user journeys definition</li>
+        <li>UX benchmarking</li>
+        <li>Service blueprint and information architecture diagrams</li>
+        <li>Low, mid, and high-fidelity wireframing in progress toward prototyping</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="accent-bar"></div>
+      <h2>UX Design Intern</h2>
+      <p class="role-meta">Butchershop, Maniak | Jul – Dec 2021</p>
+      <p class="plain-text">Contributed to the UX design of a personal finance mobile application, including user flow definition and low-fidelity wireframe creation.</p>
+    </div>
+
+    <div class="entry">
+      <div class="accent-bar"></div>
+      <h2>Projects</h2>
+      <p class="role-meta">MossyUI | Jan 2026 – Present</p>
+      <ul class="bullets">
+        <li>Design of cohesive, theme-based icon packs and illustrated mobile UI assets, including custom lock screens and wallpapers</li>
+        <li>Development of complete icon systems (20–45+ icons per collection) with strong visual identity and aesthetic consistency</li>
+        <li>Concept development from scratch: art direction, color palettes, and illustration systems</li>
+        <li>Expressive line work and storytelling balanced with clarity and usability at small mobile sizes</li>
+      </ul>
+      <a class="pill" href="https://mossyui.carrd.co" target="_blank" rel="noopener">
+        Mossy's Website
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="card">
+
+    <div class="entry">
+      <div class="accent-bar"></div>
+      <h2>Skills</h2>
+
+      <div class="skill-group">
+        <h3>UX Research &amp; Strategy</h3>
+        <p>✦ User Research ✦ Design Thinking ✦ B2B UX ✦ SaaS UX ✦ Mobile-first Design</p>
+      </div>
+      <div class="skill-group">
+        <h3>UI Design</h3>
+        <p>✦ Wireframing ✦ Prototyping ✦ Atomic Design ✦ Design Systems</p>
+      </div>
+      <div class="skill-group">
+        <h3>Development</h3>
+        <p>✦ HTML5 ✦ CSS3 ✦ JavaScript ✦ Dev Handoff</p>
+      </div>
+      <div class="skill-group">
+        <h3>Leadership &amp; Collaboration</h3>
+        <p>✦ Team Leadership ✦ Self-directed Learning ✦ Empathy</p>
+      </div>
+
+      <h2 class="section-gap">Technologies</h2>
+
+      <div class="skill-group">
+        <h3>Design &amp; Prototyping</h3>
+        <p>✦ Figma ✦ FigJam ✦ Framer ✦ Adobe Photoshop</p>
+      </div>
+      <div class="skill-group">
+        <h3>Illustration</h3>
+        <p>✦ Clip Studio Paint</p>
+      </div>
+      <div class="skill-group">
+        <h3>Development Tools</h3>
+        <p>✦ VSCode ✦ GitHub Desktop</p>
+      </div>
+      <div class="skill-group">
+        <h3>Project Management</h3>
+        <p>✦ Huly ✦ Trello ✦ Jira ✦ Notion ✦ Confluence</p>
+      </div>
+      <div class="skill-group">
+        <h3>Productivity Suites</h3>
+        <p>✦ Google Workspace ✦ Office 365</p>
+      </div>
+      <div class="skill-group">
+        <h3>AI Tools</h3>
+        <p>✦ ClaudeAI ✦ ChatGPT ✦ Gemini ✦ Figma Make</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="social-row">
+      <a href="https://karenxkoa.com" target="_blank" rel="noopener" aria-label="Website">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg>
+      </a>
+      <a href="mailto:karenxkoa@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+      </a>
+      <a href="https://be.net/karenxkoa" target="_blank" rel="noopener" aria-label="Behance">Be</a>
+      <a href="https://linkedin.com/in/karenxkoa" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://instagram.com/karenxkoa" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+      </a>
+      <a href="https://github.com/karenxkoa" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.94c-2.78.62-3.37-1.19-3.37-1.19-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
